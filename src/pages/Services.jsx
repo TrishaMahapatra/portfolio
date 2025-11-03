@@ -31,22 +31,22 @@ function Card({icon, title, subTitle}) {
 
 const items = [
     {
-        icon: "/infographic.png",
+        icon: "/portfolio/infographic.png",
         title: "Infographic Design",
         subTitle: "Simplifying information into visuals"
     },
     {
-        icon: "/carousel.png",
+        icon: "//portfoliocarousel.png",
         title: "Carousel Design",
         subTitle: "Creating engaging multi-slide"
     },
     {
-        icon: "/social media.png",
+        icon: "/portfolio/social media.png",
         title: "Social Media Graphics",
         subTitle: "Designing attractive posts"
     },
     {
-        icon: "/content research.png",
+        icon: "/portfolio/content research.png",
         title: "Content Research & Creation",
         subTitle: "Researching and writing content as needed"
     },

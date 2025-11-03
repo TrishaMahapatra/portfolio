@@ -8,7 +8,7 @@ function Home() {
             <div className='w-60 lg:w-80 h-60 lg:h-80 relative'>
                 <div className='w-[255px] h-[255px] lg:w-[340px] lg:h-[340px] bg-amber-400 absolute rounded-full' />
                 <div className='w-60 lg:w-80 h-60 lg:h-80 absolute ring-4 ring-white rounded-full overflow-hidden top-0'>
-                    <img src="/avatar.jpeg" alt="" className='w-full h-full object-fill' />
+                    <img src="/portfolio/avatar.jpeg" alt="" className='w-full h-full object-fill' />
                 </div>
             </div>
         </div>

@@ -11,25 +11,26 @@ import About from './pages/About'
 import Services from './pages/Services'
 import WorkSample from './pages/WorkSample'
 import Contact from './pages/Contact'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { Element, Link } from 'react-scroll'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<Main />} />
-      </Routes>
-    </BrowserRouter>
+    // <BrowserRouter>
+    //   <Routes>
+    //     {/* <Route path='/' element={<Navigate to={"/portfolio"} replace/>} /> */}
+    //     <Route path='/' element={<Main />} />
+    //   </Routes>
+    // </BrowserRouter>
+    <Main/>
   )
 }
 
 function Main() {
   return (
     <>
-      {/* <Cover /> */}
+      <Cover />
       <div className='h-screen'>
         <Header />
         <Home />

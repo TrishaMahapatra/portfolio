@@ -29,21 +29,21 @@ const Card = ({blog}) => {
 
 const data = [
   {
-    image: "/blogs/blog-1.png",
+    image: "/portfolio/blogs/blog-1.png",
     coloLight: "rgba(105,157,98,0.3)",
     colorDark: "rgba(105,157,98,1)",
     title: "Stop Waiting for Investors: How Vikas Suri Built Popcorn & Co. with Just ₹6,000",
     link: 'https://d2cstories.com/stories/stop-waiting-for-investors-how-vikas-suri-built-popcorn--co-with-just-6000'
   },
   {
-    image: "/blogs/blog-2.jpg",
+    image: "/portfolio/blogs/blog-2.jpg",
     coloLight: "rgba(8,15,138,.1)",
     colorDark: "rgba(8,15,138,1)",
     title: "Thomas Cook Is on Blinkit — But Should Your Product Be On a Quick Commerce Platform?",
     link: "https://d2cstories.com/stories/thomas-cook-is-on-blinkit--but-should-your-product-be-on-a-quick-commerce-platform"
   },
   {
-    image: "/blogs/blog-3.jpg",
+    image: "/portfolio/blogs/blog-3.jpg",
     coloLight: "rgba(1,1,10,.1)",
     colorDark: "rgba(1,1,10,1)",
     title: "The Future of Shopping: How ChatGPT and PayPal Are Redefining eCommerce with Agentic Commerce Protocol (ACP)",

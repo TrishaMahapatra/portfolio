@@ -30,7 +30,7 @@ function SimpleSlider({carousel, position}) {
       <Slider {...settings} className='h-full w-full'>
         {
           Array(carousel.slideCount).fill(null).map((_, index) =>
-            <img src={`/carousels/carousel-${position+1}/${index+1}.${carousel.imageType}`} alt="" srcset="" className='w-[calc((100vw-24px)/2)] h-[calc((100vh-251px)/3)] lg:w-[calc((100vw-32px)/3)] lg:h-[calc((100vh-251px)/2)] object-contain' />
+            <img src={`/portfolio/carousels/carousel-${position+1}/${index+1}.${carousel.imageType}`} alt="" srcset="" className='w-[calc((100vw-24px)/2)] h-[calc((100vh-251px)/3)] lg:w-[calc((100vw-32px)/3)] lg:h-[calc((100vh-251px)/2)] object-contain' />
           )
         }
       </Slider>

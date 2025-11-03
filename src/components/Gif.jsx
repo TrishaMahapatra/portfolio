@@ -7,7 +7,7 @@ function Gif() {
       {
         data.map((gif, index) => 
           <div className='w-full h-full'>
-            <img src={`/gifs/${gif}`} alt="" srcset="" className='w-full h-full object-contain' />
+            <img src={`/portfolio/gifs/${gif}`} alt="" srcset="" className='w-full h-full object-contain' />
           </div>
         )
       }
