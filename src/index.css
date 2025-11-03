@@ -1,0 +1,15 @@
+@font-face {
+    font-family: Apricot;
+    src: url("./assets/fonts/Apricot.otf");
+}
+@font-face {
+    font-family: Alice;
+    src: url("./assets/fonts/Alice-Regular.ttf");
+}
+
+@import "tailwindcss";
+
+@theme {
+    --font-apricot: Apricot, 'sans-serif';
+    --font-alice: Alice, 'sans-serif';
+}

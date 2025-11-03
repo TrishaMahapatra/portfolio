@@ -1,0 +1,52 @@
+import React from 'react'
+import { Element } from 'react-scroll'
+
+function Blogs() {
+  return (
+    <Element name='blogs' className='h-full w-screen p-4 grid grid-cols-3 gap-4'>
+      {
+        data.map((blog, index) => (
+          <Card key={index} blog={blog} />
+        ))
+      }
+    </Element>
+  )
+}
+
+const Card = ({blog}) => {
+  return (
+    <div className='rounded-2xl p-2 ${blog.colorLight} shadow-2xl' style={{backgroundColor: blog.coloLight}}>
+      <img src={blog.image} alt="" srcset="" className='rounded-t-2xl' />
+      <div className='p-2 mt-2'>
+        <h2 className='font-alice text-2xl mb-2' style={{color: blog.colorDark}}>{blog.title}</h2>
+        <a href={blog.link} target='_blank' className='font-alice text-lg hover:underline' style={{color: blog.colorDark}}>{blog.link}</a>
+      </div>
+    </div>
+  )
+}
+
+const data = [
+  {
+    image: "/blogs/blog-1.png",
+    coloLight: "rgba(105,157,98,0.3)",
+    colorDark: "rgba(105,157,98,1)",
+    title: "Stop Waiting for Investors: How Vikas Suri Built Popcorn & Co. with Just ₹6,000",
+    link: 'https://d2cstories.com/stories/stop-waiting-for-investors-how-vikas-suri-built-popcorn--co-with-just-6000'
+  },
+  {
+    image: "/blogs/blog-2.jpg",
+    coloLight: "rgba(8,15,138,.1)",
+    colorDark: "rgba(8,15,138,1)",
+    title: "Thomas Cook Is on Blinkit — But Should Your Product Be On a Quick Commerce Platform?",
+    link: "https://d2cstories.com/stories/thomas-cook-is-on-blinkit--but-should-your-product-be-on-a-quick-commerce-platform"
+  },
+  {
+    image: "/blogs/blog-3.jpg",
+    coloLight: "rgba(1,1,10,.1)",
+    colorDark: "rgba(1,1,10,1)",
+    title: "The Future of Shopping: How ChatGPT and PayPal Are Redefining eCommerce with Agentic Commerce Protocol (ACP)",
+    link: 'https://d2cstories.com/stories/the-future-of-shopping-how-chatgpt-and-paypal-are-redefining-ecommerce-with-agentic-commerce-protocol-acp'
+  },
+]
+
+export default Blogs
