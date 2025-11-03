@@ -32,8 +32,8 @@ function Contact() {
         setError('');
         
         emailjs
-        .sendForm('service_uo7ll3m', 'template_z3v5vwy', form.current, {
-            publicKey: '2paxr913Fl6RJ8uop',
+        .sendForm('service_ghplwyu', 'template_s3b24zu', form.current, {
+            publicKey: 'PtlTO1bmww5tMQGru',
         })
         .then(
             () => {
