@@ -1,7 +1,11 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link, scrollSpy } from 'react-scroll';
+import { HiMenuAlt1 } from "react-icons/hi";
+import Drawer from './Drawer';
+
 
 function Header() {
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {
@@ -10,11 +14,11 @@ function Header() {
   }, []);
 
   return (
-    <header className='h-15 w-full bg-white shadow-2xl px-10 flex justify-between items-center fixed top-0 z-40'>
+    <header className='h-15 w-full bg-white shadow-2xl px-4 sm:px-10 flex justify-between items-center fixed top-0 z-40'>
         <Link to='home' smooth className='flex items-center font-apricot text-lg font-bold cursor-pointer'>
             Trisha Mahapatra
         </Link>
-        <div className='h-full'>
+        <div className='hidden sm:flex h-full'>
             <ul className='flex h-full'>
               <Link 
                 className='px-5 h-full flex justify-center items-center font-alice cursor-pointer transition-transform duration-300 ease-in-out hover:scale-125 hover:bg-amber-400 hover:z-10'
@@ -73,6 +77,10 @@ function Header() {
               </Link>
             </ul>
         </div>
+        <div className='md:hidden'>
+          <HiMenuAlt1 size={24} className='text-black rotate-180' onClick={() => {setOpen(prev => !prev)}} />
+        </div>
+        <Drawer open={open} setOpen={setOpen} />
     </header>
   )
 }

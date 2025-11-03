@@ -55,45 +55,45 @@ function Contact() {
     };
 
   return (
-    <Element name='contact' className='w-full h-90 bg-slate-100 shadow-lg flex justify-between'>
-        <div class="absolute bg-[#393a3f] w-full h-93 [clip-path:polygon(60%_0,100%_0,100%_100%,40%_100%)]"/>
-            <div className='w-2/5 p-10 h-93 z-10 flex flex-col gap-5'>
-                <div className='flex gap-3 items-center'>
-                    <div className='bg-white shadow-lg p-2 rounded-full'>
-                        <FaMobile size={20} className='text-blue-500'/>
-                    </div>
-                    <p className='font-alice text-lg text-[#393a3f]'>+91 8964536765</p>
+    <Element name='contact' className='w-full h-150 lg:h-90 bg-slate-100 shadow-lg flex flex-col lg:flex-row justify-between'>
+        <div class="hidden lg:flex absolute bg-[#393a3f] w-full h-93 [clip-path:polygon(60%_0,100%_0,100%_100%,40%_100%)]"/>
+        <div className='w-full lg:w-2/5 order-2 lg:order-1 p-4 lg:p-10 h-2/5 lg:h-93 z-10 flex flex-col gap-2 lg:gap-5'>
+            <div className='flex gap-3 items-center'>
+                <div className='bg-white shadow-lg p-2 rounded-full'>
+                    <FaMobile size={20} className='text-blue-500'/>
                 </div>
-                <div className='flex gap-3 items-center'>
-                    <div className='bg-white shadow-lg p-2 rounded-full'>
-                        <IoMdMail size={20} className='text-blue-500'/>
-                    </div>
-                    <a href='mailto:hello@sofezza.com' className='font-alice text-lg text-[#393a3f] hover:underline'>trishamahapatra5@gmail.com</a>
-                </div>
-                <div className='flex gap-3 items-center'>
-                    <div className='bg-white shadow-lg p-2 rounded-full'>
-                        <FaLinkedin size={20} className='text-blue-500'/>
-                    </div>
-                    <a target='_blank' href='https://www.linkedin.com/in/trisha-mahapatra-64605b302' className='font-alice text-lg text-[#393a3f] hover:underline'>www.linkedin.com/in/trisha-mahapatra-64605b302</a>
-                </div>
-                <div className='flex gap-3 items-center'>
-                    <div className='bg-white shadow-lg p-2 rounded-full'>
-                        <IoLocation size={20} className='text-blue-500'/>
-                    </div>
-                    <p className='font-alice text-lg text-[#393a3f] hover:underline'>Medinipur</p>
-                </div>
+                <p className='font-alice text-lg text-[#393a3f]'>+91 8964536765</p>
             </div>
-            <form ref={form} method='post' className='w-2/5 p-5 h-93 z-10 flex flex-col justify-center items-center'>
-                <p className='text-white mb-3 font-alice'>Have you any query? Please DM me.</p>
-                <input type="text" name="name" id="name" placeholder='Name' value={formData.name} onChange={handleChange} className='bg-white w-2/3 p-2 rounded outline-0' />
-                <input type="text" name="email" id="email" placeholder='Email' value={formData.email} onChange={handleChange} className='bg-white w-2/3 p-2 rounded outline-0 mt-2' />
-                <input type="text" name="subject" id="subject" placeholder='Subject' value={formData.subject} onChange={handleChange} className='bg-white w-2/3 p-2 rounded outline-0 mt-2' />
-                <textarea type="text" name="message" id="message" rows={3} placeholder='Message' className='bg-white w-2/3 p-2 rounded outline-0 mt-2' value={formData.message} onChange={handleChange}/>
-                {/* <br /> */}
-                <div className='text-center w-2/3 mt-3'>
-                    <button type="button" onClick={handleSubmit} className='bg-amber-400 px-10 py-2 rounded cursor-pointer'>Send</button>
+            <div className='flex gap-3 items-center'>
+                <div className='bg-white shadow-lg p-2 rounded-full'>
+                    <IoMdMail size={20} className='text-blue-500'/>
                 </div>
-            </form>
+                <a href='mailto:hello@sofezza.com' className='font-alice text-lg text-[#393a3f] hover:underline'>trishamahapatra5@gmail.com</a>
+            </div>
+            <div className='flex gap-3 items-center'>
+                <div className='bg-white shadow-lg p-2 rounded-full'>
+                    <FaLinkedin size={20} className='text-blue-500'/>
+                </div>
+                <a target='_blank' href='https://www.linkedin.com/in/trisha-mahapatra-64605b302' className='font-alice text-lg text-[#393a3f] hover:underline'>www.linkedin.com/in/trisha-mahapatra-64605b302</a>
+            </div>
+            <div className='flex gap-3 items-center'>
+                <div className='bg-white shadow-lg p-2 rounded-full'>
+                    <IoLocation size={20} className='text-blue-500'/>
+                </div>
+                <p className='font-alice text-lg text-[#393a3f] hover:underline'>Medinipur</p>
+            </div>
+        </div>
+        <form ref={form} method='post' className='w-full order-1 lg:order-2 lg:w-2/5 p-4 lg:p-5 h-3/5 lg:h-93 z-10 flex flex-col justify-center items-center bg-[#393a3f] lg:bg-none'>
+            <p className='text-white mb-3 font-alice'>Have you any query? Please DM me.</p>
+            <input type="text" name="name" id="name" placeholder='Name' value={formData.name} onChange={handleChange} className='bg-white w-full lg:w-2/3 p-2 rounded outline-0' />
+            <input type="text" name="email" id="email" placeholder='Email' value={formData.email} onChange={handleChange} className='bg-white w-full lg:w-2/3 p-2 rounded outline-0 mt-2' />
+            <input type="text" name="subject" id="subject" placeholder='Subject' value={formData.subject} onChange={handleChange} className='bg-white w-full lg:w-2/3 p-2 rounded outline-0 mt-2' />
+            <textarea type="text" name="message" id="message" rows={3} placeholder='Message' className='bg-white w-full lg:w-2/3 p-2 rounded outline-0 mt-2' value={formData.message} onChange={handleChange}/>
+            {/* <br /> */}
+            <div className='text-center w-2/3 mt-3'>
+                <button type="button" onClick={handleSubmit} className='bg-amber-400 px-10 py-2 rounded cursor-pointer'>Send</button>
+            </div>
+        </form>
     </Element>
   )
 }

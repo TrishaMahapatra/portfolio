@@ -29,7 +29,7 @@ function App() {
 function Main() {
   return (
     <>
-      <Cover />
+      {/* <Cover /> */}
       <div className='h-screen'>
         <Header />
         <Home />

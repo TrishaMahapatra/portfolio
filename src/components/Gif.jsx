@@ -3,7 +3,7 @@ import { Element } from 'react-scroll'
 
 function Gif() {
   return (
-    <Element name='gif' className='h-full w-screen p-4 grid grid-cols-4 grid-rows-1 gap-4'>
+    <Element name='gif' className='h-full w-screen p-2 lg:p-4 grid grid-cols-2 grid-rows-2 lg:grid-cols-4 lg:grid-rows-1 gap-2 lg:gap-4'>
       {
         data.map((gif, index) => 
           <div className='w-full h-full'>

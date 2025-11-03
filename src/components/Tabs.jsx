@@ -12,21 +12,29 @@ import Gif from './Gif';
 function Tabs() {
   const [active, setActive] = useState('Infographic Design');
   return (
-    <div className='h-[calc(100%-110px)]'>
-      <div className='flex justify-around mt-5 border-b-purple-800 border-b-2 px-2'>
+    <div className='h-[calc(100%-72px)] lg:h-[calc(100%-110px)]'>
+      <div className='hidden lg:flex justify-around mt-5 border-b-purple-800 border-b-2 px-2'>
         {
           items.map(item => (
             <div className={`${active == item ? 'bg-purple-800 text-white' : 'text-purple-800'} rounded-tl-lg rounded-tr-lg grow flex justify-center py-3 cursor-pointer`} onClick={() => setActive(item)}>
               {item}
             </div>
-            // <Link horizontal spy smooth to={"infographic"} activeClass='bg-purple-800 text-white' className={`text-purple-800 rounded-tl-lg rounded-tr-lg grow flex justify-center py-3 cursor-pointer`}>
-            //   {item}
-            // </Link>
           ))
         }
       </div>
+      <div className='w-full overflow-x-scroll mt-3 lg:hidden'>
+        <div className='flex px-1 gap-2'>
+          {
+            items.map(item => (
+              <div onClick={() => setActive(item)} className={`${active == item ? 'text-white bg-purple-800' : 'bg-purple-200 text-purple-800'} rounded-full py-2 px-4 text-nowrap`}>
+                {item}
+              </div>
+            ))
+          }
+        </div>
+      </div>
       {/* <div className='h-full w-full overflow-x-scroll scrollbar-hide'> */}
-        <div className='h-full w-full relative flex' id='tabBody'>
+        <div className='h-full w-full' id='tabBody'>
           {
             active == "Infographic Design" &&
             <Infographic />

@@ -3,7 +3,7 @@ import { Element } from 'react-scroll'
 
 function Blogs() {
   return (
-    <Element name='blogs' className='h-full w-screen p-4 grid grid-cols-3 gap-4'>
+    <Element name='blogs' className='h-full w-screen p-2 lg:p-4 grid grid-cols-1 grid-rows-3 lg:grid-cols-3 lg:grid-rows-1 gap-2 lg:gap-4'>
       {
         data.map((blog, index) => (
           <Card key={index} blog={blog} />
@@ -15,9 +15,11 @@ function Blogs() {
 
 const Card = ({blog}) => {
   return (
-    <div className='rounded-2xl p-2 ${blog.colorLight} shadow-2xl' style={{backgroundColor: blog.coloLight}}>
-      <img src={blog.image} alt="" srcset="" className='rounded-t-2xl' />
-      <div className='p-2 mt-2'>
+    <div className='rounded-2xl p-2 ${blog.colorLight} shadow-2xl overflow-hidden h-fit lg:h-auto w-9/10 lg:w-auto mx-auto lg:mx-0' style={{backgroundColor: blog.coloLight}}>
+      <a href={blog.link} target='_blank' className='lg:pointer-events-none'>
+        <img src={blog.image} alt="" srcset="" className='rounded-2xl lg:rounded-t-2xl' />
+      </a>
+      <div className='p-2 mt-2 hidden lg:block'>
         <h2 className='font-alice text-2xl mb-2' style={{color: blog.colorDark}}>{blog.title}</h2>
         <a href={blog.link} target='_blank' className='font-alice text-lg hover:underline' style={{color: blog.colorDark}}>{blog.link}</a>
       </div>

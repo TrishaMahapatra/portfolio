@@ -5,27 +5,27 @@ import { Element } from 'react-scroll';
 
 function About() {
   return (
-    <Element name='about' className='bg-amber-100 w-full py-5'>
-        <h1 className='text-center font-alice text-6xl'>About me</h1>
-        <div className='flex justify-center gap-14 mt-15 pb-20'>
+    <Element name='about' className='bg-amber-100 w-full py-3 lg:py-5'>
+        <h1 className='text-center font-alice text-4xl lg:text-6xl'>About me</h1>
+        <div className='flex flex-col lg:flex-row items-center lg:items-stretch justify-center gap-8 lg:gap-14 mt-8 lg:mt-15 pb-10 lg:pb-20'>
             <Card title={"Education"}>
                 {
-                    educations.map(education => (
-                        <EducationItems course={education.course} university={education.university} year={education.year} />
+                    educations.map((education, index) => (
+                        <EducationItems key={index} course={education.course} university={education.university} year={education.year} />
                     ))
                 }
             </Card>
             <Card title={"Skills"}>
                 {
-                    skills.map(skill => (
-                        <Skill skill={skill} />
+                    skills.map((skill, index) => (
+                        <Skill key={index} skill={skill} />
                     ))
                 }
             </Card>
             <Card title={"Experience"}>
                 {
-                    experiences.map(experience => (
-                        <EducationItems course={experience.title} university={experience.company} year={experience.year} />
+                    experiences.map((experience, index) => (
+                        <EducationItems key={index} course={experience.title} university={experience.company} year={experience.year} />
                     ))
                 }
             </Card>
@@ -36,8 +36,8 @@ function About() {
 
 function Card({children, title}) {
     return (
-        <div className='bg-amber-400 p-4 pt-15 rounded-lg w-72 relative'>
-            <div className=' bg-[#393a3f] w-3/4 p-3 rounded-lg text-2xl font-bold text-white absolute -top-1 -rotate-8 flex items-center gap-2'>
+        <div className='bg-amber-400 p-4 pt-10 lg:pt-15 rounded-lg w-72 relative'>
+            <div className=' bg-[#393a3f] w-3/4 p-2 lg:p-3 rounded-lg text-xl lg:text-2xl font-bold text-white absolute -top-1 -rotate-6 lg:-rotate-8 flex items-center gap-2'>
                 <FaDotCircle size={16} />
                 <h2>{title}</h2>
             </div>
