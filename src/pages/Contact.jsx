@@ -68,7 +68,7 @@ function Contact() {
                 <div className='bg-white shadow-lg p-2 rounded-full'>
                     <IoMdMail size={20} className='text-blue-500'/>
                 </div>
-                <a href='mailto:hello@sofezza.com' className='font-alice text-lg text-[#393a3f] hover:underline'>trishamahapatra5@gmail.com</a>
+                <a href='mailto:trishamahapatra5@gmail.com' className='font-alice text-lg text-[#393a3f] hover:underline'>trishamahapatra5@gmail.com</a>
             </div>
             <div className='flex gap-3 items-center'>
                 <div className='bg-white shadow-lg p-2 rounded-full'>
