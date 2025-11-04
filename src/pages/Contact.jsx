@@ -62,7 +62,7 @@ function Contact() {
                 <div className='bg-white shadow-lg p-2 rounded-full'>
                     <FaMobile size={20} className='text-blue-500'/>
                 </div>
-                <p className='font-alice text-lg text-[#393a3f]'>+91 8964536765</p>
+                <p className='font-alice text-lg text-[#393a3f]'>+91 9647390313</p>
             </div>
             <div className='flex gap-3 items-center'>
                 <div className='bg-white shadow-lg p-2 rounded-full'>
