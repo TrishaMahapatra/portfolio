@@ -12,7 +12,7 @@ import Gif from './Gif';
 function Tabs() {
   const [active, setActive] = useState('Infographic Design');
   return (
-    <div className='h-[calc(100%-72px)] lg:h-[calc(100%-110px)]'>
+    <div className='h-[calc(100%-40px)] sm:h-[calc(100%-48px)] lg:h-[calc(100%-60px)]'>
       <div className='hidden lg:flex justify-around mt-5 border-b-purple-800 border-b-2 px-2'>
         {
           items.map(item => (
@@ -22,7 +22,7 @@ function Tabs() {
           ))
         }
       </div>
-      <div className='w-full overflow-x-scroll mt-3 lg:hidden'>
+      <div className='w-full overflow-x-scroll mt-3 sm:mt-4 lg:hidden scrollbar-hide'>
         <div className='flex px-1 gap-2'>
           {
             items.map(item => (
@@ -34,7 +34,7 @@ function Tabs() {
         </div>
       </div>
       {/* <div className='h-full w-full overflow-x-scroll scrollbar-hide'> */}
-        <div className='h-full w-full' id='tabBody'>
+        <div className='h-[calc(100%-36px)] sm:h-[calc(100%-40px)] w-full' id='tabBody'>
           {
             active == "Infographic Design" &&
             <Infographic />

@@ -5,7 +5,7 @@ import AdvImage from './AdvImage';
 
 function Carousel() {
   return (
-    <Element name='carousel' className='h-full w-full p-2 lg:p-4 grid grid-cols-2 grid-rows-3 lg:grid-cols-3 lg:grid-rows-2 gap-2'>
+    <Element name='carousel' className='h-full w-full p-2 sm:p-3 lg:p-4 grid grid-cols-2 grid-rows-3 lg:grid-cols-3 lg:grid-rows-2 gap-2'>
       {
         data.map((carousel, index) =>
           <SimpleSlider key={index} carousel={data[index]} position={index} />

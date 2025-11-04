@@ -4,7 +4,7 @@ import AdvImage from './AdvImage'
 
 function Blogs() {
   return (
-    <Element name='blogs' className='h-full w-full p-2 lg:p-4 grid grid-cols-1 grid-rows-3 lg:grid-cols-3 lg:grid-rows-1 gap-2 lg:gap-4'>
+    <Element name='blogs' className='h-full w-full p-2 sm:p-3 lg:p-4 grid grid-cols-1 grid-rows-3 sm:grid-cols-2 sm:grid-rows-2 lg:grid-cols-3 lg:grid-rows-1 gap-2 lg:gap-4'>
       {
         data.map((blog, index) => (
           <Card key={index} blog={blog} />
@@ -20,9 +20,9 @@ const Card = ({blog}) => {
       <a href={blog.link} target='_blank' className='lg:pointer-events-none'>
         <AdvImage name={blog.image} className='rounded-2xl lg:rounded-t-2xl' />
       </a>
-      <div className='p-2 mt-2 hidden lg:block'>
+      <div className='p-2 mt-2 hidden sm:block'>
         <h2 className='font-alice text-2xl mb-2' style={{color: blog.colorDark}}>{blog.title}</h2>
-        <a href={blog.link} target='_blank' className='font-alice text-lg hover:underline' style={{color: blog.colorDark}}>{blog.link}</a>
+        <a href={blog.link} target='_blank' className='font-alice text-lg hover:underline hidden lg:block' style={{color: blog.colorDark}}>{blog.link}</a>
       </div>
     </div>
   )

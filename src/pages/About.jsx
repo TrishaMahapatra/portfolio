@@ -5,9 +5,9 @@ import { Element } from 'react-scroll';
 
 function About() {
   return (
-    <Element name='about' className='bg-amber-100 w-full py-3 lg:py-5'>
-        <h1 className='text-center font-alice text-4xl lg:text-6xl'>About me</h1>
-        <div className='flex flex-col lg:flex-row items-center lg:items-stretch justify-center gap-8 lg:gap-14 mt-8 lg:mt-15 pb-10 lg:pb-20'>
+    <Element name='about' className='bg-amber-100 w-full py-3 sm:py-4 lg:py-5'>
+        <h1 className='text-center font-alice text-4xl sm:text-5xl lg:text-6xl'>About me</h1>
+        <div className='flex flex-col sm:flex-row items-center sm:items-stretch justify-center gap-8 lg:gap-14 flex-nowrap sm:flex-wrap lg:flex-nowrap mt-8 sm:mt-12 lg:mt-15 pb-10 lg:pb-20'>
             <Card title={"Education"}>
                 {
                     educations.map((education, index) => (
@@ -36,8 +36,8 @@ function About() {
 
 function Card({children, title}) {
     return (
-        <div className='bg-amber-400 p-4 pt-10 lg:pt-15 rounded-lg w-72 relative'>
-            <div className=' bg-[#393a3f] w-3/4 p-2 lg:p-3 rounded-lg text-xl lg:text-2xl font-bold text-white absolute -top-1 -rotate-6 lg:-rotate-8 flex items-center gap-2'>
+        <div className='bg-amber-400 p-4 pt-10 sm:pt-15 rounded-lg w-72 relative'>
+            <div className=' bg-[#393a3f] w-3/4 p-2 sm:p-3 rounded-lg text-xl sm:text-2xl font-bold text-white absolute -top-1 -rotate-6 lg:-rotate-8 flex items-center gap-2'>
                 <FaDotCircle size={16} />
                 <h2>{title}</h2>
             </div>
