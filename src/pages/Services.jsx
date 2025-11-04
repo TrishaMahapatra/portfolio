@@ -1,4 +1,5 @@
 import { Element } from "react-scroll"
+import AdvImage from "../components/AdvImage"
 
 function Services() {
   return (
@@ -19,7 +20,7 @@ function Card({icon, title, subTitle}) {
     return (
         <div className='bg-[#393a3f] p-1 rounded-tl-xl rounded-br-xl lg:rounded-tl-3xl lg:rounded-br-3xl w-7/8 lg:w-3/7 h-fit lg:h-50 relative flex'>
             <div className="bg-white rounded-tl-xl rounded-br-xl lg:rounded-tl-3xl lg:rounded-br-3xl w-2/5 shrink-0 overflow-hidden">
-                <img src={icon} alt="" srcset="" className="h-full w-full object-contain" />
+                <AdvImage name={icon} width={500} />
             </div>
             <div className="p-2 lg:p-5">
                 <h3 className="font-alice text-xl lg:text-3xl text-amber-400 pb-1 lg:pb-3">{title}</h3>
@@ -31,22 +32,22 @@ function Card({icon, title, subTitle}) {
 
 const items = [
     {
-        icon: "/portfolio/infographic.png",
+        icon: "infographic",
         title: "Infographic Design",
         subTitle: "Simplifying information into visuals"
     },
     {
-        icon: "//portfoliocarousel.png",
+        icon: "carousel",
         title: "Carousel Design",
         subTitle: "Creating engaging multi-slide"
     },
     {
-        icon: "/portfolio/social media.png",
+        icon: "social media",
         title: "Social Media Graphics",
         subTitle: "Designing attractive posts"
     },
     {
-        icon: "/portfolio/content research.png",
+        icon: "content research",
         title: "Content Research & Creation",
         subTitle: "Researching and writing content as needed"
     },

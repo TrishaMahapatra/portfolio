@@ -1,13 +1,14 @@
 import React from 'react'
+import AdvImage from './AdvImage'
 
 function DigitalPoster() {
   return (
-    <div className='h-full w-screen p-2 lg:p-4 grid grid-cols-1 grid-rows-2 lg:grid-cols-2 lg:grid-rows-1 gap-2'>
+    <div className='h-full w-full p-2 lg:p-4 grid grid-cols-1 grid-rows-2 lg:grid-cols-2 lg:grid-rows-1 gap-2'>
         <div className="">
-            <img src="/portfolio/digital poster-1.png" alt="" srcset="" className='h-full w-full object-contain' />
+            <AdvImage name={'digital poster-1'} />
         </div>
         <div className="">
-            <img src="/portfolio/digital poster-2.png" alt="" srcset="" className='h-full w-full object-contain' />
+            <AdvImage name={'digital poster-2'} />
         </div>
     </div>
   )

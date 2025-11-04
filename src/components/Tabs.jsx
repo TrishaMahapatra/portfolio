@@ -60,7 +60,7 @@ function Tabs() {
             <Banners />
           }
           {
-            active == 'blogs' &&
+            active == 'Blogs' &&
             <Blogs />
           }
           {
@@ -80,7 +80,7 @@ const items = [
   'General Post',
   'Digital Poster',
   // 'Banners',
-  'blogs',
+  'Blogs',
   'Scripting'
 ]
 
